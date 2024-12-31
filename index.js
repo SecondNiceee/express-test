@@ -14,7 +14,7 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", router)
+app.use("/api", router)
 
 
 async function startApp() {
