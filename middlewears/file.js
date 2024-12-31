@@ -34,4 +34,4 @@ const storage = multer.diskStorage({
 
   
 
-export default multer({storage : storage, fileFilter : fileFilter });
+export default multer({ dest: 'uploads/' });
