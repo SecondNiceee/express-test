@@ -16,8 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router)
 
-
-app.use(express.static(path.join(__dirname, 'uploads')));
+// app.use(express.static(path.join(__dirname, 'uploads')));
 
 
 async function startApp() {
