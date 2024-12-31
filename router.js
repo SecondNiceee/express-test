@@ -6,7 +6,9 @@ import multer from "./middlewears/file.js";
 
 const router = new Router()
 
+
 router.post("/posts" , multer.single('picture'),  PostController.create)
+
 
 router.get("/posts" , PostController.getAll)
 
