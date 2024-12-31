@@ -7,12 +7,14 @@ class PostController {
     async create (req, res){
         try{
             console.log(req.file)
-            const {author , title, content, picture} = req.body
+            const {author , title, content} = req.body
+            const picture = Date.now().toString() + '-' + req.file.filename
+            console.log(picture)
             const post = await PostService.create({author , title, content, picture})
             res.status(200).json(post)
         }
         catch(error){
-            res.status(500).json(error)
+            res.status(500).json(error.message)
         }
     }
 
