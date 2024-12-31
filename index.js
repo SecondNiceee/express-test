@@ -5,7 +5,7 @@ import fileUpload from "express-fileupload"
 import path from "path"
 import { fileURLToPath } from 'url';
 
-const PORT = 5000 
+const PORT = process.env.PORT || 3030;
 
 const DB_URL = 'mongodb+srv://col1596321:wNX8dJcmrgCW1faq@cluster0.t3b11.mongodb.net/'
 
